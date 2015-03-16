@@ -7,4 +7,4 @@ mysql -u root -h $OPEN_EYES_DB_HOST -e "grant all on $OPEN_EYES_DB_DATABASE.* to
 
 echo "Created user $OPEN_EYES_DB_USER on host $OPEN_EYES_DB_HOST with pass $OPEN_EYES_DB_PASS"
 
-curl https://raw.githubusercontent.com/openeyes/Sample/master/sql/openeyes+ophtroperationbooking.sql | mysql openeyes -u $OPEN_EYES_DB_USER -p$OPEN_EYES_DB_PASS
+wget https://raw.githubusercontent.com/openeyes/Sample/master/sql/openeyes+ophtroperationbooking.sql | mysql openeyes -u $OPEN_EYES_DB_USER -p$OPEN_EYES_DB_PASS
