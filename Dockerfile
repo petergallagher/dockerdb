@@ -33,3 +33,8 @@ ENV OPEN_EYES_DB_PASS $OPEN_EYES_DB_PASS
 ENV OPEN_EYES_DB_DATABASE $OPEN_EYES_DB_DATABASE
 
 ADD ./import.sh /usr/local/bin/import.sh
+
+RUN chmod +x /usr/local/bin/import.sh
+
+CMD ["/usr/local/bin/import.sh"]
+
