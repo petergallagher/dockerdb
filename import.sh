@@ -5,4 +5,6 @@ mysql -u root -h $OPEN_EYES_DB_HOST -e "CREATE USER '$OPEN_EYES_DB_USER' IDENTIF
 mysql -u root -h $OPEN_EYES_DB_HOST -e "CREATE USER '$OPEN_EYES_DB_USER';"
 mysql -u root -h $OPEN_EYES_DB_HOST -e "grant all on $OPEN_EYES_DB_DATABASE.* to '$OPEN_EYES_DB_USER'@'%' identified by '$OPEN_EYES_DB_PASS'"
 
-curl https://raw.githubusercontent.com/openeyes/Sample/master/sql/openeyes+ophtroperationbooking.sql | mysql openeyes -u $OPEN_EYES_DB_USER
+echo "Created user $OPEN_EYES_DB_USER on host $OPEN_EYES_DB_HOST with pass $OPEN_EYES_DB_PASS"
+
+curl https://raw.githubusercontent.com/openeyes/Sample/master/sql/openeyes+ophtroperationbooking.sql | mysql openeyes -u $OPEN_EYES_DB_USER -p$OPEN_EYES_DB_PASS
