@@ -9,5 +9,4 @@ ADD ./import.sh /usr/local/bin/import.sh
 
 RUN chmod +x /usr/local/bin/import.sh
 
-CMD ["/usr/local/bin/import.sh"]
 
