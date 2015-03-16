@@ -1,5 +1,6 @@
 FROM dockerfile/mariadb
 
+ENV TERM dumb
 ENV OPEN_EYES_DB_HOST localhost
 ENV OPEN_EYES_DB_USER openeyes
 ENV OPEN_EYES_DB_PASS oe_test
