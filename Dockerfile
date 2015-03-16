@@ -9,6 +9,3 @@ ENV OPEN_EYES_DB_DATABASE openeyes
 ADD ./import.sh /usr/local/bin/import.sh
 
 RUN chmod +x /usr/local/bin/import.sh
-RUN /usr/local/bin/import.sh
-
-
