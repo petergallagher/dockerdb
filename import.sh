@@ -1,4 +1,6 @@
 #!/bin/bash
+
+sed -i "/bind-address\s*=\s*127.0.0.1/d" /etc/mysql/my.cnf
 service mysql start
 
 mysql -u root -h $OPEN_EYES_DB_HOST -e "CREATE DATABASE $OPEN_EYES_DB_DATABASE"
