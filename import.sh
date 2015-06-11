@@ -1,4 +1,5 @@
 #!/bin/bash
+sed -i "s/log_bin/#log_bin/g" /etc/mysql/my.cnf
 service mysql start
 
 mysql -u root -h $OPEN_EYES_DB_HOST -e "CREATE DATABASE $OPEN_EYES_DB_DATABASE"
