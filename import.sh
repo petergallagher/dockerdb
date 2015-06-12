@@ -1,5 +1,5 @@
 #!/bin/bash
-service mysql start
+service mysql restart
 
 mysql -u root -h $OPEN_EYES_DB_HOST -e "CREATE DATABASE $OPEN_EYES_DB_DATABASE"
 mysql -u root -h $OPEN_EYES_DB_HOST -e "CREATE USER '$OPEN_EYES_DB_USER' IDENTIFIED BY '$OPEN_EYES_DB_PASS'"
