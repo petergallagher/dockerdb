@@ -6,11 +6,14 @@ ENV OPEN_EYES_DB_USER openeyes
 ENV OPEN_EYES_DB_PASS oe_test
 ENV OPEN_EYES_DB_DATABASE openeyes
 
-ADD ./my.cnf /etc/mysql/my.cnf
-ADD ./import.sh /usr/local/bin/import.sh
-
 VOLUME /var/log
 
+RUN apt-get install -y supervisor
 RUN chmod +x /usr/local/bin/import.sh
 
-CMD ["mysqld_safe"]
+ADD ./my.cnf /etc/mysql/my.cnf
+ADD ./import.sh /usr/local/bin/import.sh
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# start supervisor
+CMD ["/usr/bin/supervisord"]
