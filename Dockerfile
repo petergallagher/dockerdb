@@ -16,6 +16,7 @@ ADD ./import.sh /usr/local/bin/import.sh
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 RUN chmod +x /usr/local/bin/import.sh
+RUN mkdir /var/log/supervisor
 
 # start supervisor
 CMD ["/usr/bin/supervisord"]
