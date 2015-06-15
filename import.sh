@@ -8,7 +8,7 @@ RET=1
 while [[ RET -ne 0 ]]; do
     echo "=> Waiting for confirmation of MySQL service startup"
     sleep 5
-    mysql -u"$1" -p"$2" -e "status" > /dev/null 2>&1
+    mysql -u root -h $OPEN_EYES_DB_HOST -e "status" > /dev/null 2>&1
 RET=$?
 done
 
