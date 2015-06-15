@@ -1,7 +1,11 @@
 #!/bin/bash
+UP=$(pgrep mysql | wc -l);
+if [ "$UP" -ne 1 ];
+then
+    echo "=> Starting MySQL Server"
+    /usr/bin/mysqld_safe > /dev/null 2>&1 &
+fi
 
-echo "=> Starting MySQL Server"
-/usr/bin/mysqld_safe > /dev/null 2>&1 &
 PID=$!
 
 RET=1
