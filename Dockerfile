@@ -1,4 +1,4 @@
-FROM dockerfile/mariadb
+FROM mariadb
 
 ENV TERM dumb
 ENV OPEN_EYES_DB_HOST localhost
